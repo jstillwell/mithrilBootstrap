@@ -145,10 +145,8 @@
             return m('div', { class: 'form-group' }, content)
         },
         text: function (content, placeholder) {
-            return m('form', { class: 'form-group' }, [
-                m('label', content, [
+            return m('label', content, [
                     m('input[type=text]', { class: 'form-control', 'placeholder': placeholder })
-                ])
             ])
         },
         textarea: function (content, placeholder, rows) {
@@ -161,35 +159,22 @@
             if (placeholder === "") {
                 placeholder = "Password";
             }
-            return m('form', { class: 'form-group' }, [
-                m('label', {}, [
+            return m('label', {}, [
                     m('input[type=password]', { class: 'form-control', 'placeholder': placeholder })
-                ], content)
-            ])
+            ], content)
         },
         chk: function (content) {
-            return m('form', { class: 'form-group' }, [
-                m('label', {}, [
+            return m('label', {}, [
                     m('input[type=checkbox]', { class: 'form-control' })
-                ], content)
-            ])
+            ], content)
         },
         radio: function (content) {
-            return m('form', { class: 'form-group' }, [
-                m('label', {}, [
+            return m('label', {}, [
                     m('input[type=radio]', { class: 'form-control'})
-                ], content)
-            ])
+            ], content)
         },
         input: function (content, placeholder) {
-            return m('form', { class: 'input-group' }, [
-                m('span', {class:'input-group-btn'}, [
-                    m('span', { class: 'btn btn-default btn-file', 'multiple':'multiple'}, [
-                        m('input[type=file]')
-                    ], content)
-                ]),
-                m('input[type=text]', {class:'form-control', 'placeholder':placeholder})
-            ])
+            return m('input[type=text]', {class:'form-control', 'placeholder':placeholder});
         }
     },
     wells: {
