@@ -1,4 +1,4 @@
-﻿var bsm = {
+﻿(var bsm = {
     panels: {
         panel: function (type, title, content) {
             switch (type) {
@@ -203,4 +203,4 @@
             return m('div', { class: 'well well-sm' }, content)
         }
     }
-};
+})();
